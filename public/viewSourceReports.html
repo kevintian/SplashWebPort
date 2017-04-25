@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>View Source Report</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <!--Custom CSS-->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div style="height: 100vh">
+    <div class="flex-center flex-column animated fadeIn background">
+        <!--Form without header-->
+        <div class="card w-50">
+            <div class="card-block">
+
+                <!--Header-->
+                <div class="text-center">
+                    <h3>Water Source Reports</h3>
+                    <hr class="mt-2 mb-2">
+                </div>
+                <div class=container>
+                    <div id = "result" class="row">
+                        <!--This is where the template starts-->
+                    </div>
+                </div>
+            </div>
+
+            <!--Footer-->
+            <div class="modal-footer">
+                <a class="btn btn-default" href="homepage.php">Back</a>
+            </div>
+
+        </div>
+        <!--/Form without header-->
+    </div>
+</div>
+
+<!--Template for handlebars-->
+<script id="event-template" type="text/x-handlebars-template">
+    {{#each this}}
+    <div class="col-lg-6 mb-1">
+        <div class="card">
+            <div class="card-block">
+                <h4 class="card-title">Report {{reportID}}</h4>
+                <h6 class="card-subtitle mb-1 text-muted">Reporter: {{reporter}}</h6>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p>Water Type: {{waterType}}</p>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <p style="font-weight:300">{{latitude}}, {{longitude}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Water Condition: {{waterCondition}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!--Custom JavaScript-->
+
+<script src="js/handlebars-v4.0.5.js"></script>
+<script type="text/javascript" src="js/viewSourceReports.js"></script>
+
+
+
+</body>
+
+</html>

@@ -3,28 +3,24 @@
  */
 $(document).ready(function() {
 
-    $('#POIcard').on('click', function(event) {
-        window.location = "addPOI.html";
+    $('#viewSourceReports').on('click', function(event) {
+        window.location = "viewSourceReports.html";
     });
 
-    $('#datacard').on('click', function(event) {
-        window.location = "addDataPoint.html";
+    $('#submitSourceReport').on('click', function(event) {
+        window.location = "submitSourceReport.html";
     });
 
-    $('#pendingDataCard').on('click', function(event) {
+    $('#viewQualityReports').on('click', function(event) {
         window.location = "viewPendingData.html";
     });
 
-    $('#pendingUserCard').on('click', function(event) {
+    $('#submitQualityReport').on('click', function(event) {
         window.location = "viewPendingUsers.html";
     });
 
-    $('#generateReportsCard').on('click', function(event) {
+    $('#viewWaterTrends').on('click', function(event) {
         window.location = "generatePOIReport.html";
-    });
-
-    $('#filterSearchPOICard').on('click', function(event) {
-        window.location = "filterSearchPOI.html";
     });
 
     $('#logout').on('click', function() {
