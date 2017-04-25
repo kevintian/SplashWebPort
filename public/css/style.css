@@ -1,0 +1,65 @@
+/* YOUR CUSTOM STYLES */
+/*.background {*/
+    /*background-color: #4FC3F7 ;*/
+/*}*/
+
+.div-inline{
+    display:inline-block;
+}
+
+.dropdown-menu {width: 100%;}
+
+.dropdown-toggle {width: 100%;}
+
+.card-center {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
+.card-clickable:hover {
+    cursor:pointer;
+}
+
+.hoverableRows tr {
+    cursor:pointer;
+}
+
+.centered {
+    font-size: 25px;
+    padding-right: 20px;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+html, body {
+    max-height:100%;
+    max-width: 100%;
+    overflow:hidden;
+}
+
+.btn-resize {
+    font-size: 14px;
+    font-family:Roboto,sans-serif
+}
+
+.navButton {
+    padding: 20px;
+    transition: 0.5s;
+    display:inline-block;
+}
+
+.navButton:hover {
+    text-shadow: 1px 0 0 currentColor;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.c-datepicker {
+    z-index: 9999;
+}
+
+.c-scrim {
+    z-index: 9990;
+}
+
