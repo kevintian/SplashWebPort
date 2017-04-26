@@ -39,7 +39,12 @@ require '../resources/library/loggedInChecker.php';
 
             <h2>What would you like to do?</h2>
 
-            <div class="card-deck w-75 card-center">
+            <?php if ($_SESSION['user_type'] == "CONTRIBUTOR"): ?>
+            <div class="card-deck w-50 card-center">
+                <?php else : ?>
+                <div class="card-deck w-75 card-center">
+                <?php endif; ?>
+
                 <div id="viewSourceReports" class="card hoverable card-clickable">
                     <img class="card-img-top" src="img/poiCard.jpg" alt="Card image cap">
                     <div class="card-block">
@@ -54,29 +59,29 @@ require '../resources/library/loggedInChecker.php';
                     </div>
                 </div>
 
-                <?php if ($_SESSION['user_type'] == "WORKER" || $_SESSION['user_type'] == "MANAGER" || $_SESSION['user_type'] == "ADMINISTRATOR" ): ?>
-                <div id="viewQualityReports" class="card hoverable card-clickable">
-                    <img class="card-img-top" src="img/reviewData.png" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">View Water Quality Reports</h4>
+                <?php if ($_SESSION['user_type'] == "WORKER" || $_SESSION['user_type'] == "MANAGER" || $_SESSION['user_type'] == "ADMINISTRATOR"): ?>
+                    <div id="viewQualityReports" class="card hoverable card-clickable">
+                        <img class="card-img-top" src="img/reviewData.png" alt="Card image cap">
+                        <div class="card-block">
+                            <h4 class="card-title">View Water Quality Reports</h4>
+                        </div>
                     </div>
-                </div>
 
-                <div id="submitQualityReport" class="card hoverable card-clickable">
-                    <img class="card-img-top" src="img/filterAndSearch.png" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Submit Water Quality Report</h4>
+                    <div id="submitQualityReport" class="card hoverable card-clickable">
+                        <img class="card-img-top" src="img/filterAndSearch.png" alt="Card image cap">
+                        <div class="card-block">
+                            <h4 class="card-title">Submit Water Quality Report</h4>
+                        </div>
                     </div>
-                </div>
                 <?php endif; ?>
 
-                <?php if ($_SESSION['user_type'] == "MANAGER" || $_SESSION['user_type'] == "ADMINISTRATOR" ): ?>
-                <div id="viewWaterTrends" class="card hoverable card-clickable">
-                    <img class="card-img-top" src="img/reviewData.png" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">View Water Trends</h4>
+                <?php if ($_SESSION['user_type'] == "MANAGER" || $_SESSION['user_type'] == "ADMINISTRATOR"): ?>
+                    <div id="viewWaterTrends" class="card hoverable card-clickable">
+                        <img class="card-img-top" src="img/reviewData.png" alt="Card image cap">
+                        <div class="card-block">
+                            <h4 class="card-title">View Water Trends</h4>
+                        </div>
                     </div>
-                </div>
                 <?php endif; ?>
 
             </div>

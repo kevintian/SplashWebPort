@@ -9,8 +9,6 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
-    <link href="css/material-datetime-picker.css" rel="stylesheet">
-
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
@@ -38,22 +36,19 @@
                 </div>
 
                 <!--Body-->
-                <div id="waterType" class="row text-center text-inline justify-content-center">
+                <div id="waterQuality" class="row text-center text-inline justify-content-center">
                     <div class="col-xl-6 col-lg-12 col-md-12">
-                        <label style="font-weight: 300;" class="centered" for="types">Water Type: </label>
+                        <label style="font-weight: 300;" class="centered" for="types">Water Quality: </label>
                         <div class="btn-group" style="width:60%" role="group">
-                            <button id="types" type="button" data-toggle="dropdown" value="1"
+                            <button id="waterQualities" type="button" data-toggle="dropdown" value="1"
                                     class="btn btn-primary dropdown-toggle">
-                                Select Type<span class="caret"></span>
+                                Select Water Quality<span class="caret"></span>
                             </button>
-                            <ul id="typeMenu" class="dropdown-menu">
+                            <ul id="waterQualityMenu" class="dropdown-menu">
                                 <!--Will be dynamically added by JS-->
-                                <li><a href="#" data-value="1">Bottled</a></li>
-                                <li><a href="#" data-value="2">Well</a></li>
-                                <li><a href="#" data-value="3">Stream</a></li>
-                                <li><a href="#" data-value="4">Lake</a></li>
-                                <li><a href="#" data-value="5">Spring</a></li>
-                                <li><a href="#" data-value="6">Other</a></li>
+                                <li><a href="#" data-value="1">Safe</a></li>
+                                <li><a href="#" data-value="2">Treatable</a></li>
+                                <li><a href="#" data-value="3">Unsafe</a></li>
 
                             </ul>
                         </div>
@@ -62,21 +57,18 @@
 
                 <br>
 
-                <div id="waterCondition" class="row justify-content-center text-center text-inline">
-                    <div class="col-xl-7 col-lg-12 col-12">
-                        <label style="font-weight: 300;" class="centered" for="conditions">Water Condition: </label>
-                        <div class="btn-group" style="width:60%" role="group">
-                            <button id="conditions" type="button" data-toggle="dropdown" value="1"
-                                    class="btn btn-primary dropdown-toggle">
-                                Select Condition<span class="caret"></span>
-                            </button>
-                            <ul id="conditionMenu" class="dropdown-menu">
-                                <!--Will be dynamically added by JS-->
-                                <li><a href="#" data-value="1">Waste</a></li>
-                                <li><a href="#" data-value="2">Treatable-Clear</a></li>
-                                <li><a href="#" data-value="3">Treatable-Muddy</a></li>
-                                <li><a href="#" data-value="4">Potable</a></li>
-                            </ul>
+                <div class="row text-center justify-content-center">
+                    <br>
+                    <div class="col-xl-4 col-lg-6 col-12">
+                        <div class="md-form input-group" style="margin-bottom: 0;">
+                            <input id="virusPPM" type="text" class="form-control">
+                            <label id="virusPPMLabel" for="virusPPM">Virus PPM</label>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-12">
+                        <div class="md-form input-group" style="margin-bottom: 0;">
+                            <input id="contaminantPPM" type="text" class="form-control">
+                            <label id="contaminantPPMLabel" for="contaminantPPM">Contaminant PPM</label>
                         </div>
                     </div>
                 </div>
@@ -122,7 +114,7 @@
 
 <script src="js/dropdownToggle.js"></script>
 
-<script src="js/submitSourceReport.js"></script>
+<script src="js/submitQualityReport.js"></script>
 
 
 </body>

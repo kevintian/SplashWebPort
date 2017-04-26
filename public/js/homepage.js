@@ -12,15 +12,11 @@ $(document).ready(function() {
     });
 
     $('#viewQualityReports').on('click', function(event) {
-        window.location = "viewPendingData.html";
+        window.location = "viewQualityReports.html";
     });
 
     $('#submitQualityReport').on('click', function(event) {
-        window.location = "viewPendingUsers.html";
-    });
-
-    $('#viewWaterTrends').on('click', function(event) {
-        window.location = "generatePOIReport.html";
+        window.location = "submitQualityReport.html";
     });
 
     $('#logout').on('click', function() {
